@@ -1,0 +1,57 @@
+.black-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.bottom-pop-card {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+
+  .title {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  #join-page-username {
+    font-weight: 900;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  .bottom-pop-card-btn {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+
+    .left-btn, .right-btn {
+      width: 50%;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      cursor: pointer;
+    }
+
+    .left-btn {
+      color: #999;
+    }
+
+    .right-btn {
+      color: #1983FF;
+    }
+  }
+}

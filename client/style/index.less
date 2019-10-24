@@ -1,0 +1,190 @@
+.page {
+    padding: 0 20px;
+}
+
+.min-width-335 {
+    @media only screen and (min-width: 375px) {
+        width: 335px;
+        margin: 0 auto;
+    }
+}
+
+.thin-line {
+    height: 1px;
+    width: 100%;
+    background-color: #eeeeee;
+    transform: scaleY(0.5);
+}
+
+.navbar-header {
+    padding-top: 20px;
+    display: flex;
+
+    .navbar-back-arrow {
+        background: url("../resource/back-arrow.svg");
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+        cursor: pointer;
+    }
+
+    .navbar-title {
+        font-size: 18px;
+        font-weight: 800;
+        cursor: pointer;
+    }
+}
+
+.common-list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.right-thin-line {
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: #eeeeee;
+    transform: scaleY(0.5);
+    margin-left: 20px;
+}
+
+.header-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 40px 20px 0 20px;
+    box-sizing: border-box;
+
+    .top-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 800;
+    }
+
+    .search-icon {
+        cursor: pointer;
+    }
+}
+
+._blank_80height {
+    height: 80px;
+    width: 100%;
+}
+
+.top-title {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.dash-under-title {
+    background-color: #1983FF;
+    width: 24px;
+    height: 8px;
+    margin-bottom: 70px;
+}
+
+.body-text {
+    color: #999;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.bottom-btn {
+    color: #1983FF;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 60px;
+    display: flex;
+    cursor: pointer;
+
+    .text {
+        margin-right: 12px;
+    }
+
+    .arrow {
+        width: 24px;
+        position: relative;
+        top: -1px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.form {
+    margin-top: 160px;
+
+    .form-item {
+        margin-bottom: 30px;
+
+        .title {
+            font-size: 16px;
+        }
+
+        .input-container {
+            .input {
+                border: none;
+                width: 280px;
+                font-size: 16px;
+                padding: 12px 0;
+                outline: none;
+                font-weight: 600;
+            }
+        }
+
+        &.last-item {
+            margin-bottom: 60px;
+        }
+
+        .error-hint {
+            width: 280px;
+            color: #F41C3B;
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+.bottom-btn {
+    margin-bottom: 60px;
+}
+
+.bottom-append-info {
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 60px;
+
+    a {
+        text-decoration: none;
+        color: #999;
+    }
+}
+
+.toast {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    font-weight: 800;
+    background-color: #1983FF;
+    z-index: 150;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-error {
+    text-align: center;
+}

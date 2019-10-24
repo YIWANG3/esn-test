@@ -1,0 +1,71 @@
+#bottom-tab {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  height: 80px;
+  width: 100%;
+  box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, 0.05);
+  background-color: white;
+
+  .tab-item-container {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+
+    .tab-item {
+      cursor: pointer;
+      width: 25%;
+      text-align: center;
+
+      .name {
+        font-size: 12px;
+        color: #ccc;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+      }
+
+      .icon-chats {
+        background-image: url("../../resource/chat.svg");
+      }
+
+      .icon-announce {
+        background-image: url("../../resource/announce.svg");
+      }
+
+      .icon-directory {
+        background-image: url("../../resource/directory.svg");
+      }
+
+      .icon-me {
+        background-image: url("../../resource/me.svg");
+      }
+
+      &.current {
+        .name{
+          color: #1983FF;
+        }
+
+        .icon-chats {
+          background-image: url("../../resource/chat-blue.svg");
+        }
+
+        .icon-announce {
+          background-image: url("../../resource/announce-blue.svg");
+        }
+
+        .icon-directory {
+          background-image: url("../../resource/directory-blue.svg");
+        }
+
+        .icon-me {
+          background-image: url("../../resource/me-blue.svg");
+        }
+      }
+    }
+  }
+}
