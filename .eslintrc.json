@@ -1,6 +1,7 @@
 {
 	"parserOptions": {
-		"ecmaVersion": 6
+		"ecmaVersion": 6,
+		"sourceType": "module"
 	},
 	"env": {
 		"es6": true,
@@ -56,7 +57,7 @@
 		"array-element-newline": "off",
 		"camelcase": "warn",
 		"func-style": ["error", "expression"],
-		"indent": ["error", 2],
+		"indent": ["error", 4],
 		"key-spacing": ["warn", {
 			"singleLine": {
 				"beforeColon": false,
