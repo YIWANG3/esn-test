@@ -1,18 +1,18 @@
-const mongoose = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')(mongoose);
+const mongoose = require("mongoose");
+const AutoIncrement = require("mongoose-sequence")(mongoose);
 
 const ChatSchema = new mongoose.Schema({
-    type: {
-        type: String
+    type : {
+        type : String
     },
-    from: {
-        type: String
+    from : {
+        type : String
     },
-    to: {
-        type: String
+    to : {
+        type : String
     },
-    latestMessage: {
-        type: Object
+    latestMessage : {
+        type : Object
     }
 });
 
@@ -66,10 +66,10 @@ ChatSchema.statics.related = async function (username) {
     let success = true;
     try {
         res = await this.find({
-            $or: [{
-                from: username
+            $or : [{
+                from : username
             }, {
-                to: username
+                to : username
             }]
         });
     } catch (e) {
@@ -82,8 +82,8 @@ ChatSchema.statics.related = async function (username) {
     };
 };
 
-ChatSchema.plugin(AutoIncrement, { inc_field: 'chatId' });
+ChatSchema.plugin(AutoIncrement, { inc_field: "chatId" });
 
-const Chat = mongoose.model('Chat', ChatSchema);
+const Chat = mongoose.model("Chat", ChatSchema);
 
 module.exports = Chat;

@@ -1,14 +1,13 @@
 {
 	"parserOptions": {
-		"ecmaVersion": 6,
+		"ecmaVersion": 2017,
 		"sourceType": "module"
 	},
 	"env": {
 		"es6": true,
 		"mocha": true,
 		"jest": true,
-		"node": true,
-		"jquery": true
+		"node": true
 	},
 	"rules": {
 		"no-console": "warn",
@@ -20,7 +19,7 @@
 		"no-irregular-whitespace": "warn",
 		"no-unreachable": "error",
 		"use-isnan": "error",
-		"complexity": ["error", 4],
+		"complexity": ["error", 6],
 		"curly": "warn",
 		"default-case": "error",
 		"eqeqeq": "error",

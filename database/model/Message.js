@@ -1,31 +1,31 @@
-const mongoose = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')(mongoose);
+const mongoose = require("mongoose");
+const AutoIncrement = require("mongoose-sequence")(mongoose);
 
 const MessageSchema = new mongoose.Schema({
-    time: {
-        type: Date,
-        required: true
+    time : {
+        type :     Date,
+        required : true
     },
-    from: {
-        type: String
+    from : {
+        type : String
     },
-    to: {
-        type: String
+    to : {
+        type : String
     },
-    type: {
-        type: String
+    type : {
+        type : String
     },
-    content: {
-        type: String
+    content : {
+        type : String
     },
-    status: {
-        type: String
+    status : {
+        type : String
     },
-    read: {
-        type: Boolean
+    read : {
+        type : Boolean
     },
-    chatId: {
-        type: Number
+    chatId : {
+        type : Number
     }
 });
 
@@ -50,9 +50,9 @@ MessageSchema.statics.latestPublic = async function () {
     let success = true;
     try {
         res = await this.find({
-            to: 'public'
+            to : "public"
         }).sort({ id: -1 }).limit(1);
-        if (res && res.length > 0) {
+        if(res && res.length > 0) {
             res = res[0];
         }
     } catch (e) {
@@ -69,21 +69,21 @@ MessageSchema.statics.history = async function (from, to, smallestMessageId, pag
     let res = [];
     let success = true;
     try {
-        if (to === 'public') {
+        if(to === "public") {
             res = await Message.find({
-                to: 'public',
-                id: { $lt: +smallestMessageId }
+                to : "public",
+                id : { $lt: +smallestMessageId }
             }).sort({ id: -1 }).limit(pageSize);
         } else {
             res = await Message.find({
-                $or: [{
-                    from: from,
-                    to: to
+                $or : [{
+                    from : from,
+                    to :   to
                 }, {
-                    to: from,
-                    from: to
+                    to :   from,
+                    from : to
                 }],
-                id: { $lt: +smallestMessageId }
+                id : { $lt: +smallestMessageId }
             }).sort({ id: -1 }).limit(pageSize);
         }
         res = res.reverse();
@@ -97,8 +97,8 @@ MessageSchema.statics.history = async function (from, to, smallestMessageId, pag
     };
 };
 
-MessageSchema.plugin(AutoIncrement, { inc_field: 'id' });
+MessageSchema.plugin(AutoIncrement, { inc_field: "id" });
 
-const Message = mongoose.model('Message', MessageSchema);
+const Message = mongoose.model("Message", MessageSchema);
 
 module.exports = Message;
